@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Movie Collection</title>
+    <title>Weekly Plans</title>
     <style>
         /* Global Styles */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f4f7fc;
+            background: #eef2f7;
             margin: 0;
             padding: 20px;
             display: flex;
@@ -16,109 +16,103 @@
         }
 
         .container {
-            width: 100%;
+            width: 90%;
             max-width: 900px;
             margin-top: 30px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
         }
 
         h1 {
             text-align: center;
-            background-color: #4CAF50;
-            color: white;
-            margin: 0;
-            padding: 20px;
-            font-size: 2rem;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-
-        th {
-            background-color: #f2f2f2;
             color: #333;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
         }
 
-        tr:hover {
-            background-color: #f1f1f1;
+        /* Grid for cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        /* Card Styles */
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .day {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        .plan {
+            font-size: 1rem;
+            color: #555;
         }
 
         footer {
             text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
+            margin-top: 50px;
+            color: #777;
             font-size: 0.9rem;
         }
 
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>My Movie Collection</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Genre</th>
-                    <th>Year</th>
-                    <th>Directed By</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Movie 1</td>
-                    <td>Comedy</td>
-                    <td>2015</td>
-                    <td>Charles Daavid</td>
-                </tr>
-                <tr>
-                    <td>Classis</td>
-                    <td>Drama</td>
-                    <td>1998</td>
-                    <td>Vicky Patel</td>
-                </tr>
-                <tr>
-                    <td>Movie 3</td>
-                    <td>Horror</td>
-                    <td>2018</td>
-                    <td>Rudra Patel</td>
-                </tr>
-                <tr>
-                    <td>Movie 4</td>
-                    <td>History</td>
-                    <td>2019</td>
-                    <td>Charles Vim</td>
-                </tr>
-                <tr>
-                    <td>Movie 5</td>
-                    <td>Romance</td>
-                    <td>2020</td>
-                    <td>Charles Vimol</td>
-                </tr>
-                <tr>
-                    <td>Movie 6</td>
-                    <td>History</td>
-                    <td>2019</td>
-                    <td>Charles Vim</td>
-                </tr>
-            </tbody>
-        </table>
+        <h1>Weekly Plans</h1>
+        <div class="grid">
+            <div class="card">
+                <div class="day">Monday</div>
+                <div class="plan">Plan the week ahead, attend meetings, and set goals.</div>
+            </div>
+            <div class="card">
+                <div class="day">Tuesday</div>
+                <div class="plan">Work on personal projects and do some reading.</div>
+            </div>
+            <div class="card">
+                <div class="day">Wednesday</div>
+                <div class="plan">Midweek review, exercise, and connect with friends.</div>
+            </div>
+            <div class="card">
+                <div class="day">Thursday</div>
+                <div class="plan">Focus on learning new skills and online courses.</div>
+            </div>
+            <div class="card">
+                <div class="day">Friday</div>
+                <div class="plan">Wrap up weekly work, plan weekend activities.</div>
+            </div>
+            <div class="card">
+                <div class="day">Saturday</div>
+                <div class="plan">Go for a morning jog, coffee with friends, visit local market.</div>
+            </div>
+            <div class="card">
+                <div class="day">Sunday</div>
+                <div class="plan">Relax, read a book, movie night, prepare for the week ahead.</div>
+            </div>
+        </div>
+
         <footer>
-            &copy; 2025 Jay Baid. All rights reserved.
+            &copy; 2025 Your Name. All rights reserved.
         </footer>
     </div>
 
