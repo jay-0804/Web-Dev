@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Shapes Showcase</title>
+    <title>Delicious Pancakes Recipe</title>
     <style>
         /* Global Styles */
         body {
@@ -12,124 +12,141 @@
             padding: 0;
             background-color: #f4f7fc;
             color: #333;
-            display: grid;
-            place-items: center;
-            height: 100vh;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            float: left;
             text-align: center;
         }
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
         }
 
-        .shapes-container {
+        main {
+            padding: 20px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
-            justify-items: center;
-            align-items: center;
-            max-width: 90%;
-            margin: 0 auto;
         }
 
-        .shape {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100px;
-            height: 100px;
-            margin: 10px;
-            font-size: 1.2rem;
-            font-weight: bold;
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .card h2 {
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
             color: white;
-            border-radius: 10px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 15px;
+            margin-top: 30px;
         }
 
-        .shape:hover {
-            transform: scale(1.1);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Shape Styles */
-        .square {
-            background-color: #4CAF50;
-        }
-
-        .circle {
-            background-color: #FF5722;
-            border-radius: 50%;
-        }
-
-        .rectangle {
-            background-color: #2196F3;
-            width: 150px;
-        }
-
-        .triangle {
-            background-color: transparent;
-            width: 0;
-            height: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-bottom: 100px solid #FFC107;
-        }
-
-        .oval {
-            background-color: #9C27B0;
-            border-radius: 50% / 25%;
-        }
-
-        .hexagon {
-            background-color: #009688;
-            width: 100px;
-            height: 58px;
-            position: relative;
-            margin: 29px 0;
-        }
-
-        .hexagon:before,
-        .hexagon:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-        }
-
-        .hexagon:before {
-            top: -29px;
-            border-bottom: 29px solid #009688;
-        }
-
-        .hexagon:after {
-            bottom: -29px;
-            border-top: 29px solid #009688;
-        }
-
-        .pentagon {
-            background-color: #FF9800;
-            width: 100px;
-            height: 100px;
-            clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <h1>CSS Shapes Showcase</h1>
+    <header>
+        <h1>Delicious Pancakes</h1>
+        <p>Fluffy and easy-to-make pancakes for a perfect breakfast</p>
+    </header>
 
-    <div class="shapes-container">
-        <div class="shape square">Square</div>
-        <div class="shape circle">Circle</div>
-        <div class="shape rectangle">Rectangle</div>
-        <div class="shape triangle"></div>
-        <div class="shape oval">Oval</div>
-        <div class="shape hexagon"></div>
-        <div class="shape pentagon"></div>
-    </div>
+    <nav>
+        <a href="#ingredients">Ingredients</a>
+        <a href="#instructions">Instructions</a>
+        <a href="#tips">Tips</a>
+    </nav>
+
+    <main>
+        <section class="card" id="ingredients">
+            <h2>Ingredients</h2>
+            <ul>
+                <li>1 cup of flour</li>
+                <li>2 eggs</li>
+                <li>1/2 cup of milk</li>
+                <li>1/4 cup of sugar</li>
+                <li>1 teaspoon of baking powder</li>
+                <li>1/2 teaspoon of salt</li>
+                <li>1/4 cup of melted butter</li>
+            </ul>
+        </section>
+
+        <section class="card" id="instructions">
+            <h2>Instructions</h2>
+            <ol>
+                <li>Mix the flour, sugar, baking powder, and salt in a large bowl.</li>
+                <li>In another bowl, whisk the eggs, then add milk and melted butter.</li>
+                <li>Pour wet ingredients into dry ingredients and stir until combined (some lumps are okay).</li>
+                <li>Heat a non-stick skillet over medium heat and lightly grease it.</li>
+                <li>Pour 1/4 cup of batter per pancake. Cook until bubbles form and edges look set.</li>
+                <li>Flip pancakes and cook for another 1-2 minutes until golden brown.</li>
+                <li>Serve warm with maple syrup, fresh fruit, or whipped cream.</li>
+            </ol>
+        </section>
+
+        <section class="card" id="tips">
+            <h2>Tips</h2>
+            <ul>
+                <li>For fluffier pancakes, fold in beaten egg whites at the end.</li>
+                <li>Use buttermilk instead of regular milk for richer flavor.</li>
+                <li>Don't press pancakes with the spatula; let them rise naturally.</li>
+                <li>Keep skillet at medium heat to cook evenly without burning.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 Your Name. All rights reserved.
+    </footer>
 
 </body>
 </html>
