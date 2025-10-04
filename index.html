@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delicious Pancakes Recipe</title>
+    <title>My Semantic Web Page</title>
     <style>
         /* Global Styles */
         body {
@@ -17,18 +17,8 @@
         header {
             background-color: #4CAF50;
             color: white;
+            padding: 20px;
             text-align: center;
-            padding: 30px 20px;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-
-        header p {
-            margin-top: 10px;
-            font-size: 1.2rem;
         }
 
         nav {
@@ -51,101 +41,55 @@
 
         main {
             padding: 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
         }
 
-        .card {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-        }
-
-        .card h2 {
-            color: #4CAF50;
-            margin-bottom: 15px;
-        }
-
-        ul, ol {
-            padding-left: 20px;
+        section {
+            margin-bottom: 20px;
         }
 
         footer {
-            text-align: center;
             background-color: #333;
             color: white;
-            padding: 15px;
-            margin-top: 30px;
-        }
-
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2rem;
-            }
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Delicious Pancakes</h1>
-        <p>Fluffy and easy-to-make pancakes for a perfect breakfast</p>
+        <h1>Welcome to My Semantic Web Page</h1>
+        <p>Exploring the power of semantic HTML5 elements</p>
     </header>
 
     <nav>
-        <a href="#ingredients">Ingredients</a>
-        <a href="#instructions">Instructions</a>
-        <a href="#tips">Tips</a>
+        <a href="#section1">Section 1</a>
+        <a href="#section2">Section 2</a>
+        <a href="#section3">Section 3</a>
     </nav>
 
     <main>
-        <section class="card" id="ingredients">
-            <h2>Ingredients</h2>
-            <ul>
-                <li>1 cup of flour</li>
-                <li>2 eggs</li>
-                <li>1/2 cup of milk</li>
-                <li>1/4 cup of sugar</li>
-                <li>1 teaspoon of baking powder</li>
-                <li>1/2 teaspoon of salt</li>
-                <li>1/4 cup of melted butter</li>
-            </ul>
+        <section id="section1">
+            <h2>Section 1: Introduction</h2>
+            <p>This section introduces the topic of semantic HTML5 elements and their importance in modern web development.</p>
         </section>
 
-        <section class="card" id="instructions">
-            <h2>Instructions</h2>
-            <ol>
-                <li>Mix the flour, sugar, baking powder, and salt in a large bowl.</li>
-                <li>In another bowl, whisk the eggs, then add milk and melted butter.</li>
-                <li>Pour wet ingredients into dry ingredients and stir until combined (some lumps are okay).</li>
-                <li>Heat a non-stick skillet over medium heat and lightly grease it.</li>
-                <li>Pour 1/4 cup of batter per pancake. Cook until bubbles form and edges look set.</li>
-                <li>Flip pancakes and cook for another 1-2 minutes until golden brown.</li>
-                <li>Serve warm with maple syrup, fresh fruit, or whipped cream.</li>
-            </ol>
+        <section id="section2">
+            <h2>Section 2: Benefits</h2>
+            <p>Learn about the advantages of using semantic elements, including improved accessibility and SEO.</p>
         </section>
 
-        <section class="card" id="tips">
-            <h2>Tips</h2>
-            <ul>
-                <li>For fluffier pancakes, fold in beaten egg whites at the end.</li>
-                <li>Use buttermilk instead of regular milk for richer flavor.</li>
-                <li>Don't press pancakes with the spatula; let them rise naturally.</li>
-                <li>Keep skillet at medium heat to cook evenly without burning.</li>
-            </ul>
+        <section id="section3">
+            <h2>Section 3: Implementation</h2>
+            <p>Discover how to implement semantic HTML5 elements in your own projects with practical examples.</p>
         </section>
     </main>
 
     <footer>
-        &copy; 2025 Your Name. All rights reserved.
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
     </footer>
 
 </body>
