@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Grid Layout</title>
+    <title>Profile Card</title>
     <style>
         /* Global Styles */
         body {
@@ -18,93 +18,105 @@
             text-align: center;
         }
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
-            width: 90%;
-            max-width: 1200px;
-        }
-
-        .grid-item {
+        .card {
             background-color: #fff;
+            width: 300px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-header {
+            background-color: #4CAF50;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: white;
         }
 
-        .grid-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        .card-header img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid white;
+            margin-bottom: 10px;
         }
 
-        .grid-item h2 {
-            margin-top: 0;
-            color: #4CAF50;
+        .card-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
         }
 
-        .grid-item p {
+        .card-header p {
+            margin: 5px 0;
+            font-size: 1rem;
+            color: #e0e0e0;
+        }
+
+        .card-body {
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .card-body p {
             font-size: 1rem;
             line-height: 1.5;
             color: #555;
         }
 
-        footer {
-            text-align: center;
-            background-color: #333;
-            color: white;
-            padding: 15px;
-            margin-top: 30px;
-            width: 100%;
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
         }
 
-        @media (max-width: 768px) {
-            .grid-container {
-                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            }
+        .card-footer a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-size: 1.2rem;
+        }
+
+        .card-footer a:hover {
+            color: #388e3c;
+        }
+
+        .contact-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .contact-btn:hover {
+            background-color: #388e3c;
         }
     </style>
 </head>
 <body>
 
-    <h1>Responsive Grid Layout</h1>
-
-    <div class="grid-container">
-        <div class="grid-item">
-            <h2>Item 1</h2>
-            <p>This is a description for item 1. It provides an overview of the content.</p>
+    <div class="card">
+        <div class="card-header">
+            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="John Doe">
+            <h2>John Doe</h2>
+            <p>Web Developer</p>
         </div>
-        <div class="grid-item">
-            <h2>Item 2</h2>
-            <p>This is a description for item 2. It provides an overview of the content.</p>
+        <div class="card-body">
+            <p>Passionate about building responsive and user-friendly websites. Always eager to learn new technologies and improve my skills.</p>
         </div>
-        <div class="grid-item">
-            <h2>Item 3</h2>
-            <p>This is a description for item 3. It provides an overview of the content.</p>
-        </div>
-        <div class="grid-item">
-            <h2>Item 4</h2>
-            <p>This is a description for item 4. It provides an overview of the content.</p>
-        </div>
-        <div class="grid-item">
-            <h2>Item 5</h2>
-            <p>This is a description for item 5. It provides an overview of the content.</p>
-        </div>
-        <div class="grid-item">
-            <h2>Item 6</h2>
-            <p>This is a description for item 6. It provides an overview of the content.</p>
+        <div class="card-footer">
+            <a href="https://github.com/johndoe" target="_blank">GitHub</a>
+            <button class="contact-btn">Contact</button>
         </div>
     </div>
-
-    <footer>
-        &copy; 2025 Your Company. All rights reserved.
-    </footer>
 
 </body>
 </html>
